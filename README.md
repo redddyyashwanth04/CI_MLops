@@ -1,7 +1,7 @@
 # CI_MLops
 this project is to learnings of end to end implemetation of continous Integration
 
-
+#############Learnings#######################################
 1. Continuous Integration Benefits
 Automation: Tests run automatically on every push/PR without manual intervention
 Early Detection: Bugs caught before code reaches main branch
