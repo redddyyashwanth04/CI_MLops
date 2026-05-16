@@ -43,3 +43,15 @@ graph LR
     G --> H{Tests Pass?}
     H -->|Yes| I["✅ Build Success"]
     H -->|No| J["❌ Build Fails - Notify Developer"]
+
+
+steps that are taken in this project 
+Directory and File Setup: Create a directory structure in the project repository named .github/workflows/ (the spelling must be exact). Within this, create a YAML configuration file (e.g., ci.yml) to define the CI workflow 
+Defining Workflow Logic: In the YAML file, specify the trigger events—such as 'push' or 'pull_request' on the 'main' branch—and define the 'jobs' to be executed .
+Defining Execution Environment: Configure the job to run on a specific operating system, such as 'ubuntu-latest', which is considered an industry-standard practice for server-side environments
+Configuring Workflow Steps: Inside the workflow, specify the sequential steps the runner must execute:
+Code Checkout: Use the action to pull the code from the repository into the runner
+Environment Setup: Define the Python version to be used (e.g., 3.9) 
+Dependency Installation: Execute commands to upgrade 'pip' and install necessary libraries like 'pytest' and 'streamlit' 
+Test Execution: Add a step to run 'pytest' to automatically discover and execute test files (starting with 'test_' or '_test') in the repository 
+Triggering the Workflow: Push the code changes to the specified branch (e.g., 'main'). This automatically triggers the GitHub Actions runner to execute the defined workflow and report the results
